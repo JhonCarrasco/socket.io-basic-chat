@@ -16,7 +16,10 @@
 
     <script>
         // Conexión con el socket server
-        const socket = io('https://socket-io-basic-chat-bec089234912.herokuapp.com/');
+        // Localhost
+        const socket = io('http://localhost:8080');
+        // Heroku
+        // const socket = io('https://socket-io-basic-chat-bec089234912.herokuapp.com/');
 
         
         /// Para emitir
