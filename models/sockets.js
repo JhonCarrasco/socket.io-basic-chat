@@ -15,9 +15,8 @@ class Sockets {
 
             // Escuchar evento: mensaje-to-server
             socket.on('mensaje-to-server', ( data ) => {
-                console.log( data );
-                
-                this.io.emit('mensaje-from-server', data );
+                console.log( 'server:', data );
+                this.io.emit('mensaje-from-server', {...data, msg: `${data.msg} mundo`} );
             });
             
         

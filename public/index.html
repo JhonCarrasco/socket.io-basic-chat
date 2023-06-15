@@ -20,11 +20,12 @@
 
         
         /// Para emitir
-        // socket.emit('mensaje-to-server', { data });
+        socket.emit('mensaje-to-server', { msg: 'Hola'});
         
         // Para escuchar
         socket.on('mensaje-from-server', (data) => {
             // callback a ejecutar
+            console.log('client:', data);
         });
         
 
